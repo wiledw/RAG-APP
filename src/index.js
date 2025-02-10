@@ -1,15 +1,18 @@
-/**
- * Welcome to Cloudflare Workers! This is your first worker.
- *
- * - Run `npm run dev` in your terminal to start a development server
- * - Open a browser tab at http://localhost:8787/ to see your worker in action
- * - Run `npm run deploy` to publish your worker
- *
- * Learn more at https://developers.cloudflare.com/workers/
- */
+import { Ai } from "@cloudflare/ai"
+import { Hono } from "hono"
+import ui from './ui.html'
 
-export default {
-	async fetch(request, env, ctx) {
-		return new Response('Hello World!');
-	},
-};
+const app = new Hono()
+
+// 1. The UI for asking questions
+app.get("/", c => {
+	return c.html(ui)
+})
+
+
+// 2. A POST endpoint to query the LLM
+// 3. THE UI for adding notes
+// 4. A POST endpoint to add notes
+
+
+export default app

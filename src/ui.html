@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Chat | Cloudflare RAG Example</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+  <script src="https://unpkg.com/htmx.org/dist/htmx.js"></script>
+</head>
+
+<body>
+  <h1>Retrieval Augmented Generation (RAG) Example</h1>
+
+    <p>
+    <small>
+            <a href="/ui">Query</a> ・ <a href="/notes">Notes</a> ・ <a href="/write">Add note</a>
+    </small>
+    </p>
+
+  <form class="chat-form" hx-get="/" hx-trigger="submit" hx-target="#result">
+    <textarea name="text" required="true" placeholder="Ask the AI anything"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="result"></p>
+
+  <footer>
+    <small>© 2023 Cloudflare RAG Example. All rights reserved.</small>
+  </footer>
+
+  <style>
+    body {
+      padding: 20px;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+    .chat-form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+    }
+    textarea {
+      resize: none;
+      height: 100px;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    footer {
+      margin-top: 20px;
+      text-align: center;
+    }
+    h1 {
+        color:black;
+    }
+  </style>
+</body>
+
+</html>
