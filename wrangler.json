@@ -15,5 +15,11 @@
       "database_name": "rag-app",
       "database_id": "2f478cfb-fa9e-451a-b0b5-4cdaf611bb31"
     }
+  ],
+  "vectorize": [
+    {
+      "binding": "VECTORIZE",
+      "index_name": "rag-app-index"
+    }
   ]
 }
